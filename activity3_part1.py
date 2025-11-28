@@ -1,0 +1,48 @@
+#Activity 3 - Part 1: Math functions - Fibonacci Sequence
+
+#define function for calculate Fibonacci seq
+def cal_fibonacci(length):
+
+    #define initial values
+    previousValue = 0
+    currentValue = 1
+
+    #handle special cases 
+    if length <= 0:
+        print("Invalid length")
+
+    elif length == 1:
+        print(0)
+
+    else:
+        print(previousValue) #0
+        print(currentValue) #1
+
+        for i in range(length - 2):
+            nextValue = previousValue + currentValue
+            print(nextValue)
+            
+            # update values
+            previousValue = currentValue
+            currentValue = nextValue
+
+
+
+
+#define function for calculate Factorial
+def cal_factorial(n):
+    factorial = 1
+
+    for i in range(1,n+1):
+        factorial = factorial*i  
+
+    print(factorial)
+
+
+
+#get user input for sequence length 
+length = int(input("Enter length for the Fibonacci sequence: "))
+cal_fibonacci(length)
+
+n = int(input("Enter a number to calculate the factorial: "))
+cal_factorial(n)
