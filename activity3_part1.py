@@ -1,4 +1,4 @@
-#Activity 3 - Part 1: Math functions - Fibonacci Sequence
+#Activity 3 - Part 1: Math functions
 
 #define function for calculate Fibonacci seq
 def cal_fibonacci(length):
@@ -44,5 +44,6 @@ def cal_factorial(n):
 length = int(input("Enter length for the Fibonacci sequence: "))
 cal_fibonacci(length)
 
+#get user input for factorial
 n = int(input("Enter a number to calculate the factorial: "))
 cal_factorial(n)

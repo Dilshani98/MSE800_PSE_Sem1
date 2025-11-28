@@ -1,4 +1,4 @@
-#Activity 3 - Part 1: Math functions - Fibonacci Sequence
+#Activity 3 - Part 2: Math functions using Math Lib
 
 
 import math
@@ -45,5 +45,6 @@ def cal_factorial(n):
 length = int(input("Enter length for the Fibonacci sequence: "))
 cal_fibonacci(length)
 
+#get user input for factorial
 n = int(input("Enter a number to calculate the factorial: "))
 cal_factorial(n)
