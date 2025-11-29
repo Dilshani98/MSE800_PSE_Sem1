@@ -1,26 +1,29 @@
 class mathFunctions:
     #factorial function using recursion
     def factorial(n):
+
+        if n< 0:
+            return "Invalid input"
+        
         if n == 0 or n == 1:
             return 1
-        else:
-            return n * factorial(n - 1)
         
+        return n * mathFunctions.factorial(n - 1)
+        
+
     #fibonacci function using recursion
     def fibonacci(n):
         if n <= 1:
             return n      
-        seq = fibonacci(n - 1) + fibonacci(n - 2)
+        seq = mathFunctions.fibonacci(n - 1) + mathFunctions.fibonacci(n - 2)
         return seq
     
 
-functions = mathFunctions() #define the object
 
-def main():
-    #get user input for sequence length 
+if __name__ == "__main__":
     length = int(input("Enter length for the Fibonacci sequence: "))
-    print(functions.fibonacci(length))
 
-    #get user input for factorial
     n = int(input("Enter a number to calculate the factorial: "))
-    print(functions.factorial(n))      
+
+    print("\nFactorial result:", mathFunctions.factorial(length))
+    print("\nFobonacci result:", mathFunctions.fibonacci(n))
