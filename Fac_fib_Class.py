@@ -1,4 +1,8 @@
 class MathSeries:
+
+    def __init__(self,n):
+        self.n = n
+
     # @staticmethod
     def factorial_recursive(n):
         if n < 0:
@@ -22,16 +26,20 @@ class MathSeries:
         return MathSeries.fibonacci_recursive(n - 1) + MathSeries.fibonacci_recursive(n - 2)
 
     def printFib(n):
-        fibArray = [0,1]
+        fibArray = []
         for i in range(n+1):
             nextValue = MathSeries.fibonacci_recursive(i) 
             fibArray.append(nextValue)
-            return fibArray
+        return fibArray
+
 
 
 if __name__ == "__main__":
     n = 5
 
-    print("Factorial (recursive):", MathSeries.factorial_recursive(n))
-    print("Fibonacci (recursive):", MathSeries.fibonacci_recursive(n))
-    print("Fibonacci (recursive):", MathSeries.printFib(n))
+    #create an object
+    obj = MathSeries(n)
+
+    print("Factorial (recursive):", factorial_recursive(obj))
+    print("Fibonacci (recursive):", fibonacci_recursive())
+    print("Fibonacci (recursive):", obj.printFib())
