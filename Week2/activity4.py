@@ -1,51 +1,34 @@
+def factorial(n):
 
-#Activity 3 - Part 2: Math functions using Math Lib
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)  
 
 
-import math
 
-#define function for calculate Fibonacci seq
-def cal_fibonacci(length):
+def fibonacci(n):
 
-    #define initial values
-    previousValue = 0
-    currentValue = 1
+    if n <= 1:
+        return n
 
-    #handle special cases 
-    if length <= 0:
-        print("Invalid length")
+    return fibonacci(n - 1) + fibonacci(n - 2)
+    # As calls reach base cases, results pop back up and combine.
 
-    elif length == 1:
-        print(0)
 
+if __name__ == "__main__":
+    print("Choose an option:")
+    print("1. Factorial")
+    print("2. Fibonacci")
+
+    choice = input("Enter choice (1/2): ")
+
+    if choice == "1":
+        fac = int(input("Enter a number to calculate the factorial: "))
+        ans = factorial(fac)
+    elif choice == "2":
+        fib = int(input("Enter length for the Fibonacci sequence: "))
+        ans = fibonacci(fib)
     else:
-        print(previousValue) #0
-        print(currentValue) #1
+        ans = "Invalid choice"
 
-        for i in range(length - 2):
-            #use math.fsum to do addition
-            nextValue = int(math.fsum([previousValue,currentValue])) 
-            print(nextValue)
-            
-            # update values
-            previousValue = currentValue
-            currentValue = nextValue
-
-
-
-
-#define function for calculate Factorial
-def cal_factorial(n):
-   #use math.factorial to directly calculate the output
-   factorial =  math.factorial(n)
-   print(factorial)
-
-
-
-#get user input for sequence length 
-length = int(input("Enter length for the Fibonacci sequence: "))
-cal_fibonacci(length)
-
-#get user input for factorial
-n = int(input("Enter a number to calculate the factorial: "))
-cal_factorial(n)
+    print("\nFinal result:", ans)

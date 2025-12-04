@@ -1,3 +1,5 @@
+#Update code in activity W1-A3 using recursive function
+
 #factorial function using recursion
 def factorial(n):
     if n == 0 or n == 1:
@@ -11,7 +13,6 @@ def fibonacci(n):
         return n
     
     seq = fibonacci(n - 1) + fibonacci(n - 2)
-    #seq.append(seq[-1] + seq[-2])
     return seq
     
 
