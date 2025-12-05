@@ -36,4 +36,5 @@ if __name__ == "__main__":
     count = obj.getCount(lines)
 
     print (f"Total '*' count in the file: {count}")
-   
+    
+    #path = C:/YooBee/PSE/Docs/3280709.txt
