@@ -1,7 +1,11 @@
 class FileRead:
 
-    def readFile(file_path, mode):
-        data = open(file_path,mode, encoding='utf-8')
+    def __init__(self, filePath, mode):
+        self.filePath = filePath
+        self.mode = mode
+
+    def readFile(self):
+        data = open(self.filePath,self.mode, encoding='utf-8')
 
         with data as file:
             lines = file.readlines()
@@ -11,7 +15,7 @@ class FileRead:
         data.close()
         return lines
 
-    def getCount(lines):
+    def getCount(self,lines):
         count =0 
         for line in lines:
             for char in line:
@@ -22,13 +26,14 @@ class FileRead:
 
 if __name__ == "__main__":
 
-    filePath = input("Enter file path to read: ")
-    mode = input("Enter mode: ")
+    filePath = "C:/YooBee/PSE/Docs/3280709.txt"
+    mode = "r"
 
-    lines = FileRead.readFile(filePath, mode)
+    obj = FileRead(filePath, mode)
 
-    count = FileRead.getCount(lines)
+    lines = obj.readFile()
+
+    count = obj.getCount(lines)
 
     print (f"Total '*' count in the file: {count}")
-    
-    #path = C:/YooBee/PSE/Docs/3280709.txt
+   
