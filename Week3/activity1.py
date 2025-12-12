@@ -29,12 +29,10 @@ if __name__ == "__main__":
     filePath = "C:/YooBee/PSE/Docs/3280709.txt"
     mode = "r"
 
-    obj = FileRead(filePath, mode)
+    obj = FileRead(filePath, mode) 
 
     lines = obj.readFile()
 
     count = obj.getCount(lines)
 
     print (f"Total '*' count in the file: {count}")
-    
-    #path = C:/YooBee/PSE/Docs/3280709.txt
