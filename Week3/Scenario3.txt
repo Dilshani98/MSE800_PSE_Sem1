@@ -1,0 +1,17 @@
+#Scenario
+
+
+--- YooBee College wants to develop a database system to manage their academic & administrative tasks. 
+College offers several course modules for large number of students who are following Master of Software Engineering program. 
+These students can entroll into more than one course module. Each course module can have more than one student. There are many teachers, each of them 
+assigned to more than one course module to deliver the lectures.
+
+The attached ER diagram will explain more details about the specifications of each table. In this project we use python with sqlite3 to connect
+with the database & insert 3 sample data into each table. Project includes the relevant functions to execute the queries to retrieve 
+the number of students for MSE800 course and list all teachers name who are teaching MSE801.
+
+There are inline comments in the code itself for the understanding of the concepts.----
+
+
+
+
