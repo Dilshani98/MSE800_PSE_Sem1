@@ -133,7 +133,7 @@ def main():
     specialization = "Ophthalmology"
     age_limit = 65  
 
-    filter_obj = QueryData(specialization,age_limit, db_connection)
+    filter_obj = QueryData(specialization,age_limit, db_connection) #create QueryData object
 
     doctor_count = filter_obj.getCount_of_specialists()
     print(f"Total doctors who specialized in ophthalmology: {doctor_count}")
